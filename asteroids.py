@@ -16,8 +16,7 @@ Version 1.0
 Last updated 27 March 2019
 Shoot as many asteroids as you can with 3 lives. Each asteroid is 100 points. Each asteroid not hit is -100 points. Each potion that passes by is an extra life. Use arrows to move left and right. Use spacebar to shoot lasers.
 '''
-import pygame, random, time
-from tkinter import *
+import pygame, random, time,sys
 
 pygame.init()
 pygame.font.init()
