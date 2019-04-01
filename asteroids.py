@@ -11,7 +11,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 #####
 Katie Chiu
-Paddle
+Asteroids
 Version 1.0
 Last updated 27 March 2019
 Shoot as many asteroids as you can with 3 lives. Each asteroid is 100 points. Each asteroid not hit is -100 points. Each potion that passes by is an extra life. Use arrows to move left and right. Use spacebar to shoot lasers.
@@ -72,10 +72,10 @@ class Player(Entity):
         self.ship = pygame.image.load('spaceship.png')
         self.image = pygame.transform.scale(self.ship, (175, 70))
 
-        # How many pixels the Player Paddle should move on a given frame.
+        # How many pixels the Player spaceship should move on a given frame.
         self.y_change = 0
         self.move=window_height/2
-        # How many pixels the paddle should move each frame a key is pressed.
+        # How many pixels the spaceship should move each frame a key is pressed.
 
     def MoveKeyDown(self, key):
         """Responds to a key-down event and moves accordingly"""
@@ -94,7 +94,7 @@ class Player(Entity):
     def update(self):
         self.rect.move_ip(0, self.y_change)
 
-        # If the paddle moves off the screen, put it back on.
+        # If the spaceship moves off the screen, put it back on.
         if self.rect.y<0:
             self.rect.y = 0
         elif self.rect.y>424:
